@@ -66,17 +66,17 @@ p {
 h4 {
   margin: 5px auto;
 }
-progress[value]::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(
-      -45deg,
-      transparent 33%,
-      rgba(0, 0, 0, 0.1) 33%,
-      rgba(0, 0, 0, 0.1) 66%,
-      transparent 66%
-    ),
-    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
-    -webkit-linear-gradient(left, #09c, #f44);
 
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100%;
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  border-bottom: 1px solid black;
+}
+
+h2::after,
+h2::before {
+  content: "\2022";
 }
