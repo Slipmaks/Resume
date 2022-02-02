@@ -33,6 +33,15 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+ul {
+  list-style-type: none;
+}
+ul li {
+  margin-bottom: 0.2rem;
+}
+li a::before {
+  content: "\1F914";
+}
 header {
   margin-top: 5rem;
   margin-bottom: 2rem;
