@@ -129,7 +129,7 @@
         <p>Spetember 2012 - Present</p>
         <p>Computer science</p>
       </div>
-      <div>
+      <div v-scope @vue:mounted="counter">
         <h2>My portfolio</h2>
         <ul>
           <li>
@@ -154,6 +154,13 @@
             >
           </li>
           <li>
+            <a href="https://github.com/Slipmaks/HomeWork" target="_blank"
+              >Vue ToDo In process<span id="inProcess" v-for="dot in dots"
+                >{{ dot }}</span
+              ></a
+            >
+          </li>
+          <li>
             <a
               href="https://slipmaks.github.io/todoList_pureJS/"
               target="_blank"
@@ -163,5 +170,20 @@
         </ul>
       </div>
     </main>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/petite-vue?module";
+
+      createApp({
+        dots: [],
+        counter() {
+          setInterval(() => {
+            this.dots.push(".");
+            if (this.dots.length >= 4) {
+              this.dots = [];
+            }
+          }, 500);
+        },
+      }).mount();
+    </script>
   </body>
 </html>

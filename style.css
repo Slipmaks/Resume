@@ -78,6 +78,9 @@ p {
 h4 {
   margin: 5px auto;
 }
+span {
+  font-weight: bold;
+}
 
 a {
   color: rgb(0, 0, 0);
