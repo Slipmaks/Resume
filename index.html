@@ -20,14 +20,17 @@
       <h1>maksym matsydulskas</h1>
       <div>
         <p>front-end developer</p>
-        <p>dnipropetrovsk, ukraine</p>
+        <p>dnipro, ukraine</p>
         <a href="tel:+380669723993">+380669723993</a>
+        <a href="./Resume.docx" download>
+          <i class="fas fa-download"></i> Download resume</a
+        >
       </div>
     </header>
     <aside>
       <div class="details">
         <h2>details</h2>
-        <p>Dnipropetrovsk, Ukraine</p>
+        <p>Dnipro, Ukraine</p>
         <a href="tel:+380669723993">+380669723993</a>
         <address>
           <i class="fas fa-envelope"></i>
@@ -111,15 +114,19 @@
       <div>
         <h2>Employment History</h2>
         <div>
-          <h4>System administrator at UMSF, Dnipropetrovsk</h4>
-          <p>September 2017 - Present</p>
+          <h4>System administrator, Programmer engineer at UMSF, Dnipro</h4>
+          <p>September 2017 - January 2021</p>
+          <p>
+            Network administering, advice for inexperienced PC users, execution
+            of various assignments
+          </p>
         </div>
         <div>
-          <h4>Programmer engineer at UMSF, Dnipropetrovsk</h4>
-          <p>Spetember 2017 - Present</p>
+          <h4>Web developer at UMSF, Dnipro</h4>
+          <p>January 2021 - Present</p>
           <p>
             Creating and administering site in Joomla using Helix framework,
-            make custom features
+            make custom features, editing and creating new CSS
           </p>
         </div>
       </div>
@@ -132,72 +139,14 @@
       <div v-scope @vue:mounted="counter">
         <h2>My portfolio</h2>
         <ul>
-          <li>
-            <a
-              href="https://slipmaks.github.io/halloween-template/"
-              target="_blank"
-            >
-              Temlpate "Halloween"
-            </a>
+          <li v-for="proj in projects" :key="proj.title">
+            <a :href="proj.href" target="_blank">{{proj.title}}</a>
           </li>
           <li>
-            <a
-              href="https://slipmaks.github.io/KonstructTemplateHomeWork/"
-              target="_blank"
-            >
-              Template "Construct"</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://slipmaks-workflow-spacex-template.netlify.app"
-              target="_blank"
-            >
-              Temlpate "SpaceX"
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://slipmaks.github.io/HomeWorkTemplateMyCompany/"
-              target="_blank"
-            >
-              Temlpate "My company"
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://slipmaks.github.io/HomeWorkLampHTML/"
-              target="_blank"
-            >
-              Template "Lamp"</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/Slipmaks/HomeWork" target="_blank"></a>
-              Vue ToDo In process<span id="inProcess" v-for="dot in dots"
+            <a href="https://github.com/Slipmaks/HomeWork" target="_blank"
+              >Vue ToDo In process<span id="inProcess" v-for="dot in dots"
                 >{{ dot }}</span
               ></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/Slipmaks/jsDelivrAPIVuex"
-              target="_blank"
-            >
-              Vue jsDelivr API with Vuex In process<span
-                id="inProcess"
-                v-for="dot in dots"
-                >{{ dot }}</span
-              ></a
-            >
-          </li>
-
-          <li>
-            <a
-              href="https://slipmaks.github.io/todoList_pureJS/"
-              target="_blank"
-            >
-              JavaScript ToDo</a
             >
           </li>
         </ul>
@@ -207,6 +156,43 @@
       import { createApp } from "https://unpkg.com/petite-vue?module";
 
       createApp({
+        projects: [
+          {
+            id: 1,
+            title: "Pet project - Vue jsDelivr API (Vuex4, Vuetify3-beta)",
+            href: "https://vue-jsdelivr-api.netlify.app/",
+          },
+          {
+            id: 2,
+            title: 'Temlpate "Halloween"',
+            href: "https://slipmaks.github.io/halloween-template/",
+          },
+          {
+            id: 3,
+            title: 'Template "Construct"',
+            href: "https://slipmaks.github.io/KonstructTemplateHomeWork/",
+          },
+          {
+            id: 4,
+            title: 'Temlpate "SpaceX"',
+            href: "https://slipmaks-workflow-spacex-template.netlify.app",
+          },
+          {
+            id: 5,
+            title: 'Temlpate "My company"',
+            href: "https://slipmaks.github.io/HomeWorkTemplateMyCompany/",
+          },
+          {
+            id: 6,
+            title: 'Template "Lamp"',
+            href: "https://slipmaks.github.io/HomeWorkLampHTML/",
+          },
+          {
+            id: 7,
+            title: "JavaScript ToDo",
+            href: "https://slipmaks.github.io/todoList_pureJS/",
+          },
+        ],
         dots: [],
         counter() {
           setInterval(() => {
