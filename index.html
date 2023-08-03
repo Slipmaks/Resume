@@ -10,6 +10,23 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons8-frontend-cloud-apple.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons8-frontend-cloud-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons8-frontend-cloud-16.png"
+    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Front-end Developer</title>
@@ -50,25 +67,42 @@
       <div class="details">
         <h2>details</h2>
         <p>Dnipro, Ukraine</p>
-        <a href="tel:+380669723993">+380669723993</a>
         <address>
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:slipmaks@gmail.com" title="Send mail"
-            >slipmaks@gmail.com</a
-          >
+          <a href="mailto:slipmaks@gmail.com" title="Send mail">
+            <i class="fas fa-envelope"></i> slipmaks@gmail.com
+          </a>
         </address>
         <h4>Date of birth</h4>
         <p>09.09.1994</p>
       </div>
       <div class="links">
         <h2>links</h2>
-        <i class="fab fa-github"></i>
-        <a
-          href="https://github.com/Slipmaks"
-          title="Open GitHub profile"
-          target="_blank"
-          >github</a
-        >
+        <div>
+          <a
+            href="https://github.com/Slipmaks"
+            title="Open GitHub profile"
+            target="_blank"
+            ><i class="fab fa-github"></i> github
+          </a>
+        </div>
+
+        <div>
+          <a
+            href="https://t.me/+380669723993"
+            target="_blank"
+            title="Open Telegram chat"
+            ><i class="fab fa-telegram-plane"></i> Telegram
+          </a>
+        </div>
+        <div>
+          <a
+            href="viber://chat?number=+380669723993"
+            target="_blank"
+            title="Open Viber chat"
+          >
+            <i class="fab fa-viber"></i> Viber
+          </a>
+        </div>
       </div>
       <div class="skills">
         <h2>Skills</h2>
@@ -136,8 +170,26 @@
       <div class="employment">
         <h2>Employment History</h2>
         <div>
-          <h4>Front-end Developer at Visit Everywhere</h4>
-          <p>November 2022 - Present</p>
+          <h4>Middle Front-end Developer (Invest CRM project, B2B)</h4>
+          <p>April 2023 - Present</p>
+          <ul>
+            <li>
+              Making Invest CRM for company, based on Directus API and Directus
+              ecosystem, using Vue.js 3, TypeScript, OpenAI Api, Apex Charts,
+              Vue I18n, Vue Router, Pinia, Telegraf.js
+            </li>
+            <li>
+              Created a ChatGPT assistant for business chats, Telegram bot,
+              develop a charts for analyzing and structuring data
+            </li>
+            <li>Debug and troubleshoot issues</li>
+          </ul>
+        </div>
+        <div>
+          <h4>
+            Front-end Developer at Visit Everywhere (Part-time employment)
+          </h4>
+          <p>November 2022 - January 2023</p>
           <ul>
             <li>
               Work on creating and developing responsive and user-friendly web
@@ -199,7 +251,7 @@
         </h4>
         <p>September 2012 - 2017</p>
       </div>
-      <div v-scope @vue:mounted="counter">
+      <div v-scope @vue:mounted="counter" class="portfolio">
         <h2>My portfolio</h2>
         <ul>
           <li v-for="proj in projects" :key="proj.title">
@@ -268,7 +320,7 @@
             if (this.dots.length >= 4) {
               this.dots = ["."];
             }
-          }, 500);
+          }, 600);
         },
       }).mount();
     </script>
